@@ -9,7 +9,7 @@ def deal_card():
     random_card = random.choice(cards)
     return random_card
 
-def addCards():
+def add_cards():
     for _ in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
@@ -40,7 +40,7 @@ def compare(user_score, computer_score):
     else:
         print("You lose")
 
-def gameStatus(is_game_over):
+def game_status(is_game_over):
     while not is_game_over:
         user_score =  calculate_score(user_cards)
         computer_score = calculate_score(computer_cards)
@@ -70,8 +70,8 @@ def game_continue():
         play_game()    
 
 def play_game():
-    addCards()
-    gameStatus(is_game_over)
+    add_cards()
+    game_status(is_game_over)
     
 game_continue()
 
